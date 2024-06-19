@@ -11,11 +11,31 @@
     <!-- 小駝峰:第二個單字開始自首大寫 -->
     <!-- 字串變數 -->
     <script>
-        var strName='屋米';
-        console.log(`毛孩名字:${strName}`);
-        strName=7;
-        console.log(`毛孩年紀:${strName}歲`);
-    
+        var dogName='屋米';
+        console.log(`毛孩名字:${dogName}`);
+        let dogAge=7;
+        console.log(`毛孩年紀:${dogAge}歲`);
+        dogAge="7";
+        //取得資料型態 => typeof(變數名)
+        console.log(typeof(dogAge));
+        //未轉換數值
+        console.log(`毛孩5年後年齡:${dogAge+5}歲`);
+        //已暫時轉換數值
+        console.log(`毛孩5年後年齡:${Number(dogAge)+5}歲`);
+        console.log(typeof(dogAge));
+        //真正字串轉數值，必須要重新指派轉換結果給原來變數
+        dogAge=Number(dogAge);
+        console.log(`毛孩5年後年齡:${dogAge+5}歲`);
+        console.log(typeof(dogAge));
+
+        //帶有小數點的資料叫【浮點數】
+        let pi=3.14;
+        let r=6;
+        let area = pi*r*r;
+        console.log(area);     
+        console.log(parseInt(area)); //parseInt->取整數(無條件捨去到整數位)
+        console.log(area.toFixed(2));//取小數點二位，回傳型態為字串
+        console.log(Number(area.toFixed(2)) +1);//
     </script>
 </body>
 </html>
