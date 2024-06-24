@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let score;
+        score = window.prompt('輸入分數');
+        //將字串轉數值
+        let intScore = Number(score)
+//檢查是否按了取消
+        if (score == null) {
+            console.log('您按了取消');
+        } else if (score == " ") {
+            console.log('分數不能為空白');
+        } else if (score > 100 || score < 0) {
+            console.log('分數不是有效範圍');
+        } else if (score >= 60) {
+            console.log('分數及格');
+        } else if (score < 60) {
+            console.log('分數不及格');
+        } else {
+            //以上都不成立
+            console.log('分數404')
+        }
+
+    </script>
+</body>
+
+</html>

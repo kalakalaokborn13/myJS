@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //使用輸入視窗prompt
+        //輸入分數
+        //1.檢查是否及格
+        //2.檢查是否為有效分數範圍
+        //3.檢查是否按了取消
+
+        let score;
+        score = window.prompt('輸入分數');
+        // score = window.prompt('輸入分數',('預設值'));
+        console.log(score);
+        //檢查是否按了取消
+        if (score == null) {
+            console.log('按屁按取消')
+
+        } else {
+            score = Number(score)
+            //檢查是否非數值的字串後轉換為nan
+            //檢查是否為有效分數範圍(||這是或的意思)
+        } if (score < 0 || score > 100) {
+            console.log(score + `分，你是不是打錯分數了北七`);
+            //檢查是否及格
+        } else {
+            if (score >= 60) {
+                console.log(`及格`);
+            } else {
+                console.log('不及格');
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>
