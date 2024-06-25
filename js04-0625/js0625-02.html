@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let blood;
+        blood = window.prompt('請輸入血型')
+        //兩種去除空白方法都可以
+        //blood = blood.trim(); blood = window.prompt('請輸入血型').trim;
+
+        if (blood == null) {
+            document.write('您按了取消');
+        } else {
+            blood = blood.trim(); //是否按了取消
+        } if (blood.trim == ("")) {
+            //trim()=>去除內容後是空白
+            document.write('選項不能為空白');
+        } else if (blood == "A" || blood == "a") {
+            document.write('A型');
+        } else if (blood == "b" || blood == "B") {
+            document.write('B型');
+        } else if (blood == "O" || blood == "o") {
+            document.write('O型');
+        } else if (blood == "ab" || blood == "aB" || blood == "AB" || blood == "Ab") {
+            document.write('AB型');
+        } else {
+            //以上都不成立
+            document.write('選項404')
+        }
+
+
+
+    </script>
+</body>
+
+</html>

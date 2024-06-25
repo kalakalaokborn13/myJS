@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let blood = prompt('請輸入血型')
+        if (blood == null) {
+            document.write('您按了取消');
+        } else {
+            switch (blood.trim()) {
+                case "":
+                    document.write('選項不能為空白')
+                    break; //沒有填寫任何內容，連空白都沒有
+                case 'a':
+                case 'A':
+                    document.write('A型')
+                    break; //結束switch
+                case 'b':
+                case 'B':
+                    document.write('B型')
+                    break;
+                case 'o':
+                case 'O':
+                    document.write('O型')
+                    break;
+                case 'ab':
+                case 'AB':
+                case 'aB':
+                case 'Ab':
+                    document.write('AB型')
+                    break;
+                default:
+                    document.write('輸入err')
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>
