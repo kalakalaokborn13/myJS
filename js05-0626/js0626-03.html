@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我開始聽不懂了</title>
+</head>
+
+<body>
+    <script>
+        //ex7:
+        //彈出輸入視窗=>prompt()
+        //輸入運算起始值=>1
+        //輸入運算結束值=>10
+        //算出奇數和=>25
+        //算出偶數和=>30
+
+        let begin = Number(prompt('輸入運算起始值'));
+        let end = Number(prompt('輸入運算結束值'));
+
+        let tot1 = 0;//奇數和
+        let tot2 = 0;//偶數和
+
+        for (let i = begin; i <= end; i++) {
+            if (i % 2 === 1) {
+                //奇數
+                tot1 = tot1 + i;
+            } else {
+                //偶數
+                tot2 = tot2 + i
+            }
+        }
+        console.log(`${begin}-${end}的奇數和=>${tot1}`);
+        console.log(`${begin}-${end}的偶數和=>${tot2}`);
+
+
+    </script>
+</body>
+
+</html>
