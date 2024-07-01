@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let correct_answer = Number(99);
+        let num_answer = 3;
+
+        for (let i = 0; i < num_answer; i++) {
+            if (num_answer != correct_answer) {
+                let answer = parseInt(window.prompt("請輸入數字"));
+                document.write("第 " + (i + 1) + " 次猜測: " + answer + "<br>");
+                if (answer === correct_answer) {
+                    document.write("挑戰成功<br>");
+                    break;
+                } else if (i === (num_answer - 1)) {
+                    document.write("挑戰失敗<br>");
+                } else {
+                    document.write("再試一次<br>");
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
