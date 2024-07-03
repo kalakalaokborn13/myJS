@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //請設計一個函式，能夠四則運算
+        function calc(a, b, c) {
+            //處理四則運算的結果
+            if (c == "+") {
+                //5+3=8
+                document.write(`${a}+${b}=${a + b}`);
+            } else if (c == "-") {
+                document.write(`${a}-${b}=${a - b}`);
+            } else if (c == "*") {
+                document.write(`${a}*${b}=${a * b}`);
+            } else if (c == "/") {
+                document.write(`${a}/${b}=${(a / b).toFixed(2)}`);//抓小數點後兩位
+            } else {
+                document.write('運算符號不存在');
+            }
+        }
+        //使用輸入視窗產生任意兩數與運算符號
+
+        //處理排除非數字或取消狀況
+        //1.非數字=>isNaN()
+        //2.多於空白=>trim()
+        //3.取消狀況=>null
+        let inputA = prompt("請輸入數值a");
+        let inputB = prompt("請輸入數值b");
+        let inputC = prompt("請輸入+-*/");
+
+        if (inputA == null || inputB == null || inputC == null) {
+            alert("取消屁喔");
+        } else if (isNaN(inputA) || isNaN(inputB)) {
+            //NaN=>不是 一個 數值(Not A Nuber)
+            alert("北七喔輸入數值看不懂逆");
+        }else{
+            //字串轉數值=>Number(字串)
+            //去除多餘空白=>字串.trim()=>字與字空白不會被刪除
+            inputA = Number(inputA.trim());
+            inputB = Number(inputB.trim());
+            //最後再呼叫函式
+            calc(inputA, inputB, inputC);
+        }
+
+
+
+        /*let inputA=Number(prompt("請輸入a數"));
+        let inputB=Number(prompt("請輸入b數"));*/
+
+
+
+        //這裡的let abc 跟參數的名稱可以一樣但不是同種東西
+        /*
+        let a=prompt("請輸入a數"));
+        let b=prompt("請輸入b數"));
+        let c=prompt("請輸入+-* /"));
+        */
+
+
+
+    </script>
+</body>
+
+</html>
