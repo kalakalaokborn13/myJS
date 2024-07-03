@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隨堂測驗QHQ</title>
+</head>
+
+<body>
+    <script>
+        //請輸入成績n次，直到輸入{-1}或{取消}就結束
+        /*
+        第一次分數:90
+        第二次分數:50
+        第三次分數:60
+        第四次分數:-1/取消
+        ------------
+        及格:2人
+        不及格:1人
+        總分:200
+        總平均:66.67分
+        */
+
+        let i = 0;//第N次
+        let totScore = 0;//總分
+        let PassScore = 0;//及格人數
+        let NoPassScore = 0;//不及格人數
+        let avg = 0;//總平均
+
+        while (true) {//不需要執行回圈的條件
+            let Score = prompt("請輸入分數");
+            //是否輸入-1或消
+            if (Score == null || Score === '-1') {
+                break;
+            }
+            //是否為非數字
+            if (isNaN(Score)) {
+                alert("非數值請重新輸入");
+                continue;
+            }
+            Score = Number(Score);//字串轉數值
+            //分數是否為有效範圍(1-100)
+            if (Score > 100 || Score < 0) {
+                alert("分數有效範圍為1-100，請重新輸入")
+            continue; 
+        }
+
+
+            if (Score >= 60) {
+                PassScore++;//及格分數累計
+            } else {
+                NoPassScore++;//不及格分數累計
+            }
+            totScore=totScore+Score;
+            i++;
+            document.write(`第${i}次分數:${Score}<br>`);
+
+        }
+        //console.log(結束了)
+        document.write('----------<br>')
+        document.write(`及格:${PassScore}人<br>`);
+        document.write(`不及格:${NoPassScore}人<br>`);
+        document.write(`總分:${totScore}<br>`);
+        //總平均計算
+        avg = totScore / (PassScore + NoPassScore);//求平均
+        avg = avg.toFixed(2)
+        document.write(`總平均:${avg}人</br>`);
+
+
+
+    </script>
+</body>
+
+</html>
