@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基本表單</title>
+    <style>
+        #form_member--edit>* {
+            display: block;
+            margin: 0px;
+        }
+
+        #form_member--edit label {
+            line-height: 100;
+            margin-top: 25px;
+        }
+
+        #usename {
+            width: 350px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 產品搜尋表單 -->
+    <form action="" method="post" name="form-search" id="form-search-product" title="產品搜尋表單">
+        <label for="">產品搜尋:</label>
+        <input type="search" name="input-search" id="input-search" title="產品搜尋欄位，請輸入產品關鍵字" placeholder="請輸入產品關鍵字">
+        <input type="submit" value="搜尋" name="btn-search" id="btn-search" title="產品搜尋按鈕">
+    </form>
+    <!-- 會員資料修改表單 -->
+    <form action="" method="post" name="form-numder-edit" id="form-numder-edit" title="會員資料修改表單"></form>
+    <hr>
+    <header>
+        <h2>會員資料修改</h2>
+        <small>「*」為必填</small>
+    </header>
+    <form action="" method="post" name="form_member--edit" id="form-numder-edit" title="會員資料表單修改">
+        <label for="username">*姓名:<small></small></label><br>
+        <input type="text" name="username" id="姓名欄位" placeholder="這裡輸入姓名喔" required autocomplete autofocus><br>
+        <!-- required:必填/autocomplete:抓輸入過的資料/autofocus:自動聚焦(一個檔案裡只能設定一次)-->
+
+        <label for="account">帳號:</label><br>
+        <input type="text" name="account" id="account" title="帳號欄位不可修改" value="abc123" disabled><br>
+        <!--disabled:禁用，推薦使用，樣式較明確，使用者容易理解  -->
+
+        <label for="idnumber">身分證字號:</label><br>
+        <input type="text" name="idnumber" id="idnumber" title="身分證帳號欄位不可修改" value="A1234567" readonly><br>
+        <!--readonly:只讀，不推薦使用，樣式不明確，使用者容易誤會。  -->
+
+        <label for="tel">電話:</label><br>
+        <input type="tel" name="tel" id="tel" title="連絡電話" placeholder="請輸入連絡電話"><br>
+
+        <label for="mobile">手機:</label><br>
+        <input type="text" name="mobile" id="mobile" title="連絡電話" placeholder="共10碼"><br>
+
+        <label for="email">*Email:</label><br>
+        <input type="email" name="email" id="email" title="email欄位" placeholder="請輸入電子郵件信箱" required><br>
+
+        <label for="password">修改密碼:</label><br>
+        <input type="password" name="password" id="password"><br>
+
+        <label for="password-1">確認密碼:</label><br>
+        <input type="password" name="password" id="password-1"><br>
+        <!-- 注意id不能重複 -->
+
+        <label for="birthday">生日:</label> <br>
+        <input type="date" name="birthday" id="birthday" title="生日欄位" placeholder="請選擇生日"><br>
+
+        <label for="file">上傳檔案:<small>檔案體積不可超過9999999MB，僅可上傳瑞克搖.jpg、.gif、.png、.pdf等檔案</small></label> <br>
+        <input type="file" name="file" id="file" title="上傳檔案按鈕"><br>
+
+        <label for="gender">性別:</label> <br>
+        <select name="gender" id="gender" id="性別選項"><br>
+            <option value="">請選擇</option>
+            <option value="生理男">生理男</option>
+            <option value="生理女">生理女</option>
+
+            <label for="other">其他類別:</label> <br>
+            <select name="other" id="other" title="類別選項"><br>
+                <optgroup label="分類一">
+                    <option value="選項一">選項一</option>
+                    <option value="選項二">選項二</option>
+                    <option value="選項三">選項三</option>
+                </optgroup>
+                <!-- select預設顯示第一個選項，所以要自己在第一個選項設定【請選擇】不給值 -->
+                <label for="other">其他類別:</label> <br>
+                <select name="other" id="other" title="類別選項"><br>
+                    <optgroup label="分類一">
+                        <option value="選項一">選項一</option>
+                        <option value="選項二">選項二</option>
+                        <option value="選項三">選項三</option>
+                    </optgroup>
+                    <optgroup label="分類二">
+                        <option value="選項一">選項一</option>
+                        <option value="選項二">選項二</option>
+                        <option value="選項三">選項三</option>
+                    </optgroup>
+<!--optgroup選項分類，需要搭配laber屬性設定分類名稱 -->
+
+<!-- radio必須帶值，才能回傳給資料庫 -->
+ <!-- 相關元素群組 標題 -->
+  <legend>其他類型</legend>
+  
+ <fieldset>
+
+
+
+
+
+ </fieldset>
+                    <div>
+                        <input type="reset" name="btn-reset--member" id="btn-reset--member" title="會員資料修改重寫" value="重填">
+                        <input type="submit" name="btn-submit--member" id="btn-submit--member" title="會員資料修改送出"
+                            value="送出點我">
+
+                    </div>
+
+
+    </form>
+
+
+
+
+
+
+
+</body>
+
+</html>

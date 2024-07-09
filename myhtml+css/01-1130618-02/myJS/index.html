@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js第一次上課-0618</title>
+    <link rel="stylesheet" href="./css/js0618-1.css">
+</head>
+
+<body>
+    <!--自行撰寫js在目前檔案中-->
+    <script>
+        console.log(123);
+        console.log(567);
+        document.write('華視8:00節目');
+    </script>
+
+    <!--載入專案中的外部檔案-->
+    <!--因內往外一層 => ../ -->
+    <!--因內往外二層 => ../../ -->
+
+    <!--由外往內一層 =>./ -->
+    <script src="./js/js0618-1.js"></script>
+
+    <!--載入專案中的外部檔案-->
+    <!-- <script src="module"></script> -->
+    <h1>我們這一家</h1>
+    <!--onclick=>左鍵一下的行為事件-->
+    <!--所以任一個事件行為下可以直接使用js-->
+    <button onclick="alert('衷心感謝')">哈瞜你好嗎</button>
+    <!--使用超連結時，使用js語法才需要前贅字「javascript」要寫出來-->
+    <a href="javascript:alert('期待再相逢')">珍重再見</a>
+</body>
+
+</html>

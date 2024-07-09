@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+/*一定要在行數1，否則"UTF-8"錯誤*/
+/* 重置所有標籤的樣式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 重置字體 */
+body {
+    font-family:
+        /*西文*/
+        sans-serif
+        /*中文*/
+        "蘋果-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "microsoft jhenghei";
+    font-size: 100%;
+    line-height: 1.5;
+    background-color: beige;
+}
+
+/* 重置標題 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+/* 重置列表 */
+ul,
+ol {
+    list-style: none;
+}
+/*共用區*/
+.btn-s{
+    background-color: #ffffff;
+    color: #515151;
+    border-radius:99px ;
+    width: auto!important;/*不常用*/
+    height: 40px;
+    padding:0 20px;
+    line-height:33px;
+    transition: .35s ease-in-out
+}
+.btn-s:hover{
+background-color: #515151;
+color: #ffffff;
+}
+
+
+
+/* 重置圖片 */
+img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+/* 重置連接 */
+a {
+    display: block;
+    /*將預設inline改為block*/
+    text-decoration: none;
+}
+
+/*頁首區*/
+#topbar {
+    display: flex;
+    /*預設主軸為水平*/
+    justify-content: space-between;
+    /*主軸(水平)均分貼齊頭尾*/
+    align-items: center;
+    padding: 30px;
+}
+
+.logo {
+    width: 65px;
+}
+
+.navigation .icon {
+    display: flex;
+}
+
+.navigation .icon a {
+    /*border: solid 1px;*/
+    height: 35px;
+    width: 35px;
+    margin-left: 10px;
+    transition: 0.35s;/*時間通常不會設那麼長*/
+    /*transition:all.35s ease-in-out;*/
+}
+
+.icon-fb {
+    background-image: url(../images/icon-fb.svg);
+}
+
+.icon-fb:hover {    /*【:hover 定義效果】*/
+    background-image: url(../images/icon-fb-hover.svg);
+}
+.icon-ig {
+    background-image: url(../images/icon-ig.svg);
+}
+.icon-ig:hover {
+    background-image: url(../images/icon-ig-hover.svg);
+}
+.icon-line {
+    background-image: url(../images/icon-line.svg);
+}
+.icon-line:hover {
+    background-image: url(../images/icon-line-hover.svg);
+}
+.navigation .menu li{
+    border-right: solid 1px #515151;
+}
+.navigation .menu li:last-child{
+    border:none;
+}
+/*只有svg會自動等比例縮放，其他圖檔不會(原始尺寸)*/
+.navigation .menu {
+    display: flex;
+    margin: 15px 0;/*控制父層的外距(上方 fb.ig.line)*/
+}
+.navigation .menu a {
+    
+    line-height: 1;
+    color: rgb(138, 138, 138);
+    font-size: .9rem;
+    margin: 0 10px;/*控制子層的外距*/
+    border-bottom: solid 2px transparent;/*要預留2px的空間給他，不然不會絲滑，會卡卡的*/
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    /*主軸(垂直)*/
+    align-items: flex-end;
+    /*副軸(水平)*/
+}
+.navigation .menu a:hover {
+border-bottom: solid 2px  rgb(138, 138, 138);
+transition: 0.15s ease-in-out;
+}
+
+/*從內往外寫*/
+/*id用#號 .用 class*/
+/*a:hover { color:yellow; } 這裡的hover是懸停的意思，類似滑鼠指到網頁出來的效果，另外要注意的是，手機沒有hover效果*/
