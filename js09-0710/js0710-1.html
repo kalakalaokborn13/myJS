@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //建立陣列方法一
+        let arr1 = [1, 2, 3, 4, 5];
+        console.log(`arr1:${arr1}`);
+
+        console.log(`--------------------`);
+
+        //建立陣列方法二:先建立陣列物件再給值
+        let arr2 = new Array
+        console.log(`arr2:${arr2}`);
+        console.log(`arr2.length${arr2.length}`);
+        //給值
+        arr2[0] = "a";
+        arr2[1] = 100;
+        console.log(`arr2:${arr2}`);
+        console.log(`arr2.length${arr2.length}`);
+
+        console.log(`--------------------`);
+        //建立陣列方法三:先建立陣列物件，同時給值
+        let arr3 = new Array(99, 80, "abc", true, null, { x: 1, y: 3 });
+        //陣列裡可以很多種不同的值，ex字串、變數
+        console.log(`arr3:${arr3}`);
+        console.log(`arr3.length${arr3.length}`);
+
+        console.log(`--------------------`);
+
+        //合法的陣列宣告
+        let arr4 = [];   //可以是空陣列
+        let arr5 = [1, 2, 3];
+        let arr6 = ["a", "b", "c"];
+        let arr7 = [1, "b", true, [], { book: "javescript" }];  //陣列裡面還能有空陣列 //也能放物件屬性
+//物件
+let obj1={
+    x:5,
+    y:3
+}
+//陣列型別=>typeof 陣列名稱
+console.log()
+    </script>
+</body>
+這邊還沒寫完
+</html>

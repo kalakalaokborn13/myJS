@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr1 = [100, 30, 99, 10, 3];
+        console.log('排序前:' + arr1);
+        //遞增排序
+        arr1.sort();
+        console.log('排序後:' + arr1 + " 錯誤");
+        //發現他是按照第一位的值看大小，再看第二位的值，並不是我們要的排序
+        console.log('--------------');
+        //正確處理方式
+        arr1.sort((a, b) => {
+            return a - b;//遞增
+        })
+        console.log('遞增排序後:' + arr1);
+        //前面做過遞增 可以大膽用reverse做遞減
+        //reverse是反轉的意思 
+        //已遞增(反轉)->變遞減
+        /* arr1.reverse();
+        console.log('遞減排序後:' + arr1);*/
+
+        arr1.sort((a, b) => {
+            return b - a;//遞增
+        })
+        console.log('遞減排序後:' + arr1);
+        //上面是遞減(反轉)->變遞增
+        arr1.reverse();
+        console.log('遞增排序後:' + arr1);
+    </script>
+</body>
+
+</html>
