@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //建立學生成績樣板
+        //1.建立空白物件
+        let = new Object();
+        //2.建立物件成員(同時給值)
+        // obj.sid = 's001';
+        // obj.sName = '1號同學';
+        // obj.html = 100;
+        // obj.css = 100;
+        // obj.javascript = 100;
+        // //顯示物件全部內容
+        // console.log(obj);
+
+        // // 2.建立物件成員2
+        // obj.sid = 's002';
+        // obj.sName='2號同學';
+        // obj.html=99;
+        // obj.css=99;
+        // obj.javascript=99;
+        // //顯示物件全部內容
+        // console.log(obj);
+
+        //建立物件樣板
+        //習慣物件樣板名稱上字首為大寫
+        //1.建立物件樣板成員(類比成Figmam元件概念)
+        function Sdata(no,name,htmlScore,cssScore,jsScore) {
+            this.sid = no;
+            this.sName = name;
+            this.html = htmlScore;
+            this.css = cssScore;
+            this.javascript = jsScore;
+            console.log(`${this.sid}號${this.sName}同學,成績總分為${this.html + this.css + this.javascript}分`)
+        }
+        //2.使用物件樣板
+        let s1 = new Sdata('s001','王小名',100,100,100);
+        let s2 = new Sdata('s002','李小巴',99,99,99);
+        let s3 = new Sdata('s003','張小蜂',98,98,97);
+
+//計算全班各科總分
+//方法一:直接使用S1,S2,S3的成員
+console.log(`HTML班級總成績:`+(s1.html+s2.html+s3.html));
+console.log(`css班級總成績:`+(s1.css+s2.css+s3.css));
+console.log(`javascript班級總成績:`+(s1.javascript+s2.javascript+s3.javascript));
+
+//方法二:陣列物件
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+物件Object
+-用來裝物件的其他內容
+
+物件的使用流程
+-建立物件
+    -從空白物件開始
+        -new Object()
+            -let obj=new Object();
+    -建立物件成員
+        -物件名稱．成員名稱＝資料
+            -obj.sid='s001';
+            -obj.sName='1號同學';
+            -obj.html=100;
+            -obj.css=100;
+            -obj.javascript=100;
+        -物件名稱.函式名稱=function(){
+            .....
+        }
+-使用物件
