@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //建立一個加法運算韓式add()
+        //當呼叫函式的「參數值個數」與「參數個數」不一定相同時
+        //可以使用「其餘參數」寫法
+        //語法為名稱前有三個連續小數點=>... =>參數資料會形成一個陣列
+
+        function add(...number) {
+            let tot = 0;
+            //處理加法運算
+            //使用迴圈取得參數資料
+            console.log(number);
+            //一般迴圈寫法
+            for (let i = 0; i < number.length; i++) {
+                tot = tot + number[i];
+            }
+            // 使用for-of寫法(這裡用這個寫比較安全)
+            for (let num of number) {
+                tot = tot + num;
+            }
+
+            //回傳結果出去
+            return tot;
+        }
+        console.log(add());
+        console.log(add(5));
+        console.log(add(5, 3));
+        console.log(add(5, 3, 3));
+
+        // 把前面那一題用其餘參數寫看看
+        function Sdata(no, name, htmlScore, cssScore, jsScore, ...other) {
+            // 上面那樣寫代表前五個值一定要給，後面不一定
+            // this代表物件本身自己
+            this.sid = no;
+            this.sName = name;
+            this.html = htmlScore;
+            this.css = cssScore;
+            this.javascript = jsScore;
+            this.showData = function () {
+                console.log(`${this.sid}號${this.sName}同學,成績總分為${this.html + this.css + this.javascript}分`)
+                console.log(`身高:${other[0]},體重:${other[1]}`)
+            }
+        }
+        let s1 = new Sdata('s001', '王小名', 100, 100, 100,181,130);
+        //呼叫物件樣板中的方法
+        s1.showData();
+        let s2 = new Sdata('s002', '李小巴', 99, 99, 99,"沒有身高",99);
+        s2.showData();
+        let s3 = new Sdata('s003', '張小蜂', 98, 98, 98,170,"沒有體重");
+        s3.showData();
+    </script>
+</body>
+
+</html>
