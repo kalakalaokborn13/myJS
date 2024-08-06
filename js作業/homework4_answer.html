@@ -68,22 +68,19 @@
             myNodelist[i].appendChild(span);
         }
 
-//按下x，刪除對應li
-var close=document.getElementsByClassName('close');
-// console.log(close);
-for(i=0;i<close.length;i++){
-    close[i].onclick=function(){
-        var curLi=this.parentNode;
-        //不顯示
-        curLi.style.display='none';
-        //curLi.style.color='red';
-        //刪除線
-        //curLi.style.textDecoration='line-through';
-    }
-}
-
-
-
+        //現有的li按下x，刪除對應li
+        var close = document.getElementsByClassName('close');
+        // console.log(close);
+        for (i = 0; i < close.length; i++) {
+            close[i].onclick = function () {
+                var curLi = this.parentNode;
+                //不顯示
+                curLi.style.display = 'none';
+                //curLi.style.color='red';
+                //刪除線
+                //curLi.style.textDecoration='line-through';
+            }
+        }
 
         // 刪除第一個li
         btn2.addEventListener('click', () => {
@@ -120,7 +117,14 @@ for(i=0;i<close.length;i++){
                 var txt = document.createTextNode("X");
                 span.className = "close";
                 span.appendChild(txt);
-                li.appendChild(span);  
+                li.appendChild(span);
+
+                //新增刪除動作
+                span.onclick = function () {
+                    var curLi = this.parentNode;
+                    curLi.style.display='none';
+                }
+
 
             }
             // 清除文字方塊內容
