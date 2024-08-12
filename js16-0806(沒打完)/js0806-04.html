@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            cursor:pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span onclick="changeToAbout();">關於我</span>
+        <span onclick="changeToExps();">學經歷</span>
+        <span onclick="changeToContact();">聯絡我</span>
+        <span onclick="changeToNews();">最新活動</span>
+    </div>
+    <hr>
+    <div id="about">大家好，我是某某某</div>
+    <div id="exps" style="display: none;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque, dignissimos
+        quia repellat explicabo facere aspernatur pariatur, eum recusandae placeat reprehenderit illo, porro debitis
+        nobis! Inventore dolor unde eveniet reiciendis asperiores?</div>
+    <div id="content" style="display: none;">
+        email:Meowwwwwwwwwwwwwwwwwwwwwwww<br>
+        mobile:0912345678
+    </div id='news' style="display:none;">
+    最新活動內容區
+    <div>
+
+    </div>
+
+    <script>
+
+        let aboutDiv = '';
+        let expsDiv = '';
+        let contactDiv = '';
+        let newsDiv = '';
+
+        function getDiv() {
+            //1.先取得操作的標籤div
+            aboutDiv = document.querySelector('#aboout');
+            expsDiv = document.querySelector('#exps');
+            contactDiv = document.querySelector('#contact');
+            newsDiv = document.querySelector('#news');
+
+            //2.再對標籤div操作
+            aboutDiv.style.display = "none";
+            expsDiv.style.display = "none";
+            contactDiv.style.display = "none";
+            newsDiv.style.display = "none";
+
+        }
+
+
+        // 關於我
+        function changeToAbout() {
+
+
+        }
+
+        // 學經歷
+        function changeToExps() {
+            //1.先取得操作的標籤div
+            aboutDiv = document.querySelector('#aboout');
+            expsDiv = document.querySelector('#exps');
+
+            //2.再對標籤div操作
+            aboutDiv.style.display = "none";
+            expsDiv.style.display = "block";
+        }
+
+    </script>
+</body>
+
+</html>

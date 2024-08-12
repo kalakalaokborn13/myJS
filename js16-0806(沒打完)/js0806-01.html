@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            border: 5px solid blue;
+            width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        marquee {
+            background-color: beige;
+            width: 500px;
+        }
+    </style>
+</head>
+<!--behavior捲動方式，預設為:scroll、左右來回:alternate、只移動一次:slide -->
+<!--scrollamout 移動速度 -->
+<!--direction 移動方向(預設是左邊) -->
+<body>
+    <div class="wrap">
+        <!-- 跑馬燈效果 -->
+        <marquee 
+        behavior="" 
+        direction="right"
+        scrollamout="2" 
+        onmouseover="stop();" 
+        onmouseout="start();">
+            買一送一，買二送二，買三送三，恭賀羽球男雙奪金， 買一送一，買二送二，買三送三
+        </marquee>
+    </div>
+</body>
+
+</html>
