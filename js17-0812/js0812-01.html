@@ -36,11 +36,11 @@
         // btn2.onclick = sayHi2();
 
         // 此方法，可以帶標籤對應的事件名稱
-        let btn2 = document.querySelectById('btn2');
-        btn2.onclick = sayHi2;   //此方法，事件後面不用加()
-        function sayHi2() {
-            alert('Gooood Morning4')
-        }
+        let btn2 = document.getElementById('btn2');
+        // btn2.onclick = sayHi2;   //此方法，事件後面不用加()
+        // function sayHi2() {
+        // alert('Gooood Morning4')
+        // }
 
         //以上可以改成箭頭函式
         btn2.onclick = () => {
