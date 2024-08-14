@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 200px;
+            height: 150px;
+        }
+
+        .img {
+            width: 400px;
+            height: 250px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- 換圖效果 -->
+         
+        <div>
+            <img onclick="" id="picD"
+                src="../myhtml+css/04-1130628/images/banner_5.jpg" alt="">
+        </div>
+        <div>
+            <img onclick="changePic(picA)" id="picA"
+                src="../myhtml+css/04-1130628/images/banner_4.jpg" alt="">
+            <img onclick="changePic(picB)" id="picB"
+                src="../myhtml+css/04-1130628/images/banner_3.jpg" alt="">
+            <img onclick="changePic(picC)" id="picC"
+                src="../myhtml+css/04-1130628/images/banner_2.jpg" alt="">
+        </div>
+
+
+        <script>
+            function changePic(picA) {
+                //取得換圖的目標
+                let pic = document.getElementById('picD');
+                //換圖
+                pic.src = '../myhtml+css/04-1130628/images/banner_4.jpg';
+            }
+            function changePic(picB) {
+                //取得換圖的目標
+                let pic = document.getElementById('picD');
+                //換圖
+                pic.src = '../myhtml+css/04-1130628/images/banner_3.jpg';
+            }
+            function changePic(picC) {
+                //取得換圖的目標
+                let pic = document.getElementById('picD');
+                //換圖
+                pic.src = '../myhtml+css/04-1130628/images/banner_2.jpg';
+            }
+
+        </script>
+</body>
+
+</html>

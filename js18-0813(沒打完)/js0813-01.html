@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            color: red;
+        }
+
+        .hot {
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        .restorehot {
+            font-size: 32px;
+            font-weight: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <!--使用style 屬性  -->
+    <h1 style="color: blue;">Hello</h1>
+
+    <!-- 使用style屬性動態改變文字色彩 changeColor是取的函式名稱 -->
+    <p id="msg" onmouseover="changeColor();" onmouseout="restore();">Hello</p>
+    <script>
+        //滑鼠碰到時變色
+        function changeColor() {
+            //取得變色的目標
+            let msg = document.getElementById('msg');
+            //前景色
+            msg.style.color = '#fff';
+            //背景色
+            msg.style.backgroundColor = 'red';
+            //套用css預先作好的類別樣式
+            msg.className = 'hot';
+        }
+        //滑鼠離開時變回原色
+        function restore() {
+            //取得變色的目標
+            let msg = document.getElementById('msg');
+            //前景色空字串(連續兩次單引號或者雙引號)=>回到沒有變色的狀態
+            msg.style.color = '';
+            //背景色空字串=>回到沒有變色的狀態
+            msg.style.backgroundColor = '';
+            // 空值是回歸原本的
+            //套用css預先作好的類別樣式
+            msg.className = 'restoreHothot';
+
+            //移除類別
+        }
+    </script>
+
+</body>
+
+</html>

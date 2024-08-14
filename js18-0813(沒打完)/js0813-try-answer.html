@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+                img {
+            width: 400px;
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 縮圖換大圖 -->
+    <div class="wrap">
+        <!-- 大圖 -->
+        <div>
+            <img id="picL" src="../myhtml+css/04-1130628/images/banner_5.jpg" alt="">
+        </div>
+        <!--縮圖-->
+        <div class="picS">
+            <img onclick="changepicA()" class="pic1" src="../myhtml+css/04-1130628/images/banner_5.jpg" alt="">
+            <img onclick="changepicB()" class="pic2" src="../myhtml+css/04-1130628/images/banner_4.jpg" alt="">
+            <img onclick="changepicC()" class="pic3" src="../myhtml+css/04-1130628/images/banner_3.jpg" alt="">
+        </div>
+</body>
+<script>
+// 取得大圖
+let picL=document.getElementById('picL');
+// function changePic(picSrc)
+
+function changepicA(){
+    取得縮圖1
+    let pic1=document.getElementsByClassName("pic1");
+    picL.src="../myhtml+css/04-1130628/images/banner_5.jpg"
+}
+function changepicB(){
+    取得縮圖1
+    let pic2=document.getElementsByClassName("pic2");
+    picL.src="../myhtml+css/04-1130628/images/banner_4.jpg"
+}
+function changepicC(){
+    取得縮圖1
+    let pic3=document.getElementsByClassName("pic3");
+    picL.src="../myhtml+css/04-1130628/images/banner_3.jpg"
+}
+
+
+
+</script>
+</html>
